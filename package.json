@@ -64,7 +64,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --coverage --coverageDirectory=output/coverage/jest"
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -89,6 +89,11 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
+    "coverageReporters": [
+      "text",
+      "cobertura"
+    ],
+    "coverageDirectory": "output/coverage/jest",
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
