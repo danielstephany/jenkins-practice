@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'master' }
+    environment {
+        CI = 'true';
+    }
     stages {
         stage('build') {
            steps {
@@ -13,7 +16,7 @@ pipeline {
         }
         stage('test') {
            steps {
-                sh 'CI=true npm run test'
+                sh 'npm run test'
             }
         }
     }
