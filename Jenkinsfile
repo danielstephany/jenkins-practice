@@ -1,9 +1,13 @@
 pipeline {
-    agent { docker { image 'node:6.3' } }
+    agent { docker { image 'node:10.16' } }
     stages {
         stage('build') {
-            steps {
-                sh 'npm --version'
+           steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
