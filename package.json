@@ -90,8 +90,11 @@
       "!src/**/*.d.ts"
     ],
     "coverageReporters": [
-      "text",
-      "cobertura"
+      "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
     ],
     "coverageDirectory": "output/coverage/jest",
     "setupFiles": [
@@ -136,9 +139,16 @@
       "jest-watch-typeahead/testname"
     ]
   },
+  "jest-junit": {
+    "outputDirectory": "output/coverage/junit/junit.xml",
+    "usePathForSuiteName": "true"
+  },
   "babel": {
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "jest-junit": "^10.0.0"
   }
 }
