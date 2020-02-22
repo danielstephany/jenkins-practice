@@ -18,11 +18,11 @@ pipeline {
            steps {
                 sh 'npm run test'
             }
-            post {
-                always {
-                    junit 'output/coverage/junit/junit.xml'
-                }
-            }
+        }
+    }
+    post {
+        always {
+            junit 'output/coverage/junit/junit.xml'
         }
     }
 }
