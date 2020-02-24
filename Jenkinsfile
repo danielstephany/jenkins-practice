@@ -19,7 +19,7 @@ pipeline {
     }
     post {
         always {
-            junit './output/coverage/**/*.xml'
+            junit '**/output/coverage/**/*.xml'
         }
     }
 }
