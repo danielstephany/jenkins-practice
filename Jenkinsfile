@@ -15,11 +15,11 @@ pipeline {
            steps {
                 sh 'CI=true npm run test -- --coverage'
             }
-        }
-    }
-    post {
-        always {
-            junit '**/output/coverage/**/*.xml'
+            post {
+                always {
+                    junit '**/output/coverage/**/*.xml'
+                }
+            }
         }
     }
 }
